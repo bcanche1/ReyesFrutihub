@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Iniciar sesión | ReyesFruitHub</title>
+  <meta name="description" content="Entra a ReyesFruitHub como cliente para hacer pedidos o como administrador para gestionar la frutería.">
+  <meta name="theme-color" content="#047857">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="demo-banner"><strong>Versión de desarrollo</strong> · cuentas y datos de ejemplo</div>
+  <div class="auth">
+    <aside class="auth-side" aria-hidden="true">
+      <a class="brand" href="index.html" tabindex="-1"><span class="brand-mark" data-icon="leaf"></span><span>ReyesFruitHub<small>Frutería Reyes</small></span></a>
+      <div>
+        <h2>Inventario, proveedores y ventas en un solo lugar</h2>
+        <p>Los clientes piden en línea; la frutería controla existencias, caducidades y pedidos desde su panel.</p>
+      </div>
+      <div class="auth-fruits" id="auth-fruits"></div>
+    </aside>
+
+    <main class="auth-main" id="contenido">
+      <div class="auth-card">
+        <a class="brand" href="index.html"><span class="brand-mark" data-icon="leaf"></span><span>ReyesFruitHub<small>Frutería Reyes</small></span></a>
+        <h1 style="font-size:var(--fs-2xl)" id="auth-title">Bienvenido de vuelta</h1>
+        <p class="muted" id="auth-sub">Entra para hacer tu pedido o administrar la frutería.</p>
+
+        <div class="tabs" role="tablist" aria-label="Acceso">
+          <button type="button" role="tab" id="tab-login" aria-selected="true" aria-controls="form-login">Iniciar sesión</button>
+          <button type="button" role="tab" id="tab-registro" aria-selected="false" aria-controls="form-registro">Crear cuenta</button>
+        </div>
+
+        <form id="form-login" role="tabpanel" aria-labelledby="tab-login" class="stack" novalidate>
+          <div class="form-alert" role="alert" id="login-alert"></div>
+          <div class="field"><label for="l-email">Correo electrónico</label><input class="input" id="l-email" name="email" type="email" autocomplete="email" inputmode="email" required><span class="error" role="alert"></span></div>
+          <div class="field"><label for="l-pass">Contraseña</label><input class="input" id="l-pass" name="password" type="password" autocomplete="current-password" required><span class="error" role="alert"></span></div>
+          <button class="btn btn-primary btn-block" type="submit">Entrar</button>
+        </form>
+
+        <form id="form-registro" role="tabpanel" aria-labelledby="tab-registro" class="stack" novalidate hidden>
+          <div class="form-alert" role="alert" id="reg-alert"></div>
+          <div class="field"><label for="r-nombre">Nombre completo</label><input class="input" id="r-nombre" name="nombre" autocomplete="name" required><span class="error" role="alert"></span></div>
+          <div class="field"><label for="r-email">Correo electrónico</label><input class="input" id="r-email" name="email" type="email" autocomplete="email" inputmode="email" required><span class="error" role="alert"></span></div>
+          <div class="field"><label for="r-tel">Teléfono (opcional)</label><input class="input" id="r-tel" name="telefono" type="tel" autocomplete="tel" inputmode="tel" aria-describedby="r-tel-h"><span class="hint" id="r-tel-h">Para avisarte cuando tu pedido esté listo.</span><span class="error" role="alert"></span></div>
+          <div class="field"><label for="r-pass">Contraseña</label><input class="input" id="r-pass" name="password" type="password" autocomplete="new-password" aria-describedby="r-pass-h" required><span class="hint" id="r-pass-h">Mínimo 8 caracteres.</span><span class="error" role="alert"></span></div>
+          <button class="btn btn-primary btn-block" type="submit">Crear cuenta de cliente</button>
+          <p class="xs muted">Las cuentas de administrador solo las crea un administrador desde el panel.</p>
+        </form>
+
+        <div class="divider">Cuentas de demostración</div>
+        <div class="demo-accounts">
+          <button class="demo-acc" type="button" data-demo="cliente@reyesfruithub.demo"><span data-icon="user"></span><strong>Cliente</strong><span>Catálogo, carrito y pedidos</span></button>
+          <button class="demo-acc" type="button" data-demo="admin@reyesfruithub.demo"><span data-icon="shield"></span><strong>Administrador</strong><span>Inventario, ventas y más</span></button>
+        </div>
+        <p class="xs muted" style="margin-top:var(--s-4)">Contraseña de las cuentas demo: <code>demo123</code></p>
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/common.js"></script>
+  <script>
+  (function (RFH) {
+    const db = RFH.db;
+    const emailOk = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+    const go = (u) => { location.href = u.rol === "admin" ? "admin.html" : "cliente.html"; };
+
+    RFH.arrancar(() => {
+      const yaDentro = db.sesion();
+      if (yaDentro) { go(yaDentro); return; }
+      const setBusy = (form, on, txt) => { const b = form.querySelector('button[type="submit"]'); b.disabled = on; if (txt) b.textContent = txt; };
+
+      document.getElementById("auth-fruits").innerHTML = db.productos.filter((p) => p.destacado).slice(0, 4).map(RFH.fruitArt).join("");
+
+      const tabs = { login: document.getElementById("tab-login"), registro: document.getElementById("tab-registro") };
+      const forms = { login: document.getElementById("form-login"), registro: document.getElementById("form-registro") };
+      function show(modo) {
+        Object.keys(tabs).forEach((k) => { tabs[k].setAttribute("aria-selected", k === modo); forms[k].hidden = k !== modo; });
+        document.getElementById("auth-title").textContent = modo === "login" ? "Bienvenido de vuelta" : "Crea tu cuenta";
+        document.getElementById("auth-sub").textContent = modo === "login" ? "Entra para hacer tu pedido o administrar la frutería." : "Para apartar tu fruta y ver el estado de tus pedidos.";
+      }
+      tabs.login.addEventListener("click", () => show("login"));
+      tabs.registro.addEventListener("click", () => show("registro"));
+      if (new URLSearchParams(location.search).get("modo") === "registro") show("registro");
+
+      forms.login.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const f = e.target;
+        const alertEl = document.getElementById("login-alert");
+        alertEl.classList.remove("is-visible");
+        const ok = RFH.validate(f, {
+          email: (v) => !v ? "Escribe tu correo." : !emailOk(v) ? "Revisa el formato del correo (ej. nombre@correo.com)." : "",
+          password: (v) => !v ? "Escribe tu contraseña." : ""
+        });
+        if (!ok) return;
+        setBusy(f, true, "Entrando…");
+        const r = await db.login(f.email.value.trim(), f.password.value);
+        if (r.error) { setBusy(f, false, "Entrar"); alertEl.innerHTML = RFH.icon("alert", "icon-sm") + RFH.esc(r.error); alertEl.classList.add("is-visible"); return; }
+        go(r.user);
+      });
+
+      forms.registro.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const f = e.target;
+        const alertEl = document.getElementById("reg-alert");
+        alertEl.classList.remove("is-visible");
+        const ok = RFH.validate(f, {
+          nombre: (v) => v.length < 3 ? "Escribe tu nombre (mínimo 3 letras)." : "",
+          email: (v) => !emailOk(v) ? "Escribe un correo válido." : "",
+          telefono: (v) => v && v.replace(/\D/g, "").length < 10 ? "El teléfono debe tener 10 dígitos." : "",
+          password: (v) => v.length < 8 ? "La contraseña necesita al menos 8 caracteres." : ""
+        });
+        if (!ok) return;
+        setBusy(f, true, "Creando cuenta…");
+        const r = await db.registrar({ nombre: f.nombre.value.trim(), email: f.email.value.trim(), telefono: f.telefono.value.trim(), password: f.password.value });
+        if (r.error) { setBusy(f, false, "Crear cuenta de cliente"); alertEl.innerHTML = RFH.icon("alert", "icon-sm") + RFH.esc(r.error); alertEl.classList.add("is-visible"); return; }
+        go(r.user);
+      });
+
+      document.querySelectorAll("[data-demo]").forEach((b) => b.addEventListener("click", async () => {
+        b.disabled = true;
+        const r = await db.login(b.dataset.demo, "demo123");
+        if (r.user) go(r.user); else { b.disabled = false; RFH.toast(r.error, "error"); }
+      }));
+    });
+  })(window.RFH);
+  </script>
+</body>
+</html>

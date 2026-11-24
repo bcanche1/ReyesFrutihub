@@ -1,0 +1,5 @@
+# Credenciales: solo se versiona .env.example
+.env
+tests/node_modules/
+tests/capturas/
+qa/

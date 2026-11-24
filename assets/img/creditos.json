@@ -1,0 +1,236 @@
+[
+ {
+  "archivo": "assets/img/mercado.webp",
+  "titulo": "Dragon Fruit Stand, Mérida, Yucatán.jpg",
+  "autor": "Eden, Janine and Jim",
+  "licencia": "CC BY 2.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Dragon_Fruit_Stand,_M%C3%A9rida,_Yucat%C3%A1n.jpg",
+  "ancho": 1600,
+  "alto": 1067
+ },
+ {
+  "archivo": "assets/img/portada.webp",
+  "titulo": "Tepic fruit stand.jpg",
+  "autor": "Tomas Castelazo",
+  "licencia": "CC BY-SA 3.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Tepic_fruit_stand.jpg",
+  "ancho": 1600,
+  "alto": 1067
+ },
+ {
+  "archivo": "assets/img/productos/aguacate.webp",
+  "titulo": "Avocado Hass - single and halved.jpg",
+  "autor": "Ivar Leidus",
+  "licencia": "CC BY-SA 4.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Avocado_Hass_-_single_and_halved.jpg",
+  "ancho": 640,
+  "alto": 480
+ },
+ {
+  "archivo": "assets/img/productos/cebolla.webp",
+  "titulo": "White Onions for sale in the Market.jpg",
+  "autor": "Iwai-Dialax",
+  "licencia": "CC BY 4.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:White_Onions_for_sale_in_the_Market.jpg",
+  "ancho": 720,
+  "alto": 540
+ },
+ {
+  "archivo": "assets/img/productos/cilantro.webp",
+  "titulo": "Bunches of coriander leaves.jpg",
+  "autor": "Kpsudeep",
+  "licencia": "CC BY-SA 4.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Bunches_of_coriander_leaves.jpg",
+  "ancho": 539,
+  "alto": 404
+ },
+ {
+  "archivo": "assets/img/productos/fresa.webp",
+  "titulo": "Still life with strawberries in a crystal bowl.jpg",
+  "autor": "W.carter",
+  "licencia": "CC BY-SA 4.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Still_life_with_strawberries_in_a_crystal_bowl.jpg",
+  "ancho": 640,
+  "alto": 480
+ },
+ {
+  "archivo": "assets/img/productos/guanabana.webp",
+  "titulo": "Soursop Fruit on display at Fruit Garden Market , Port-Harcourt.jpg",
+  "autor": "Iwai-Dialax",
+  "licencia": "CC BY 4.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Soursop_Fruit_on_display_at_Fruit_Garden_Market_,_Port-Harcourt.jpg",
+  "ancho": 720,
+  "alto": 540
+ },
+ {
+  "archivo": "assets/img/productos/habanero.webp",
+  "titulo": "Starr-070730-7847-Capsicum annuum-Habanero variety-Foodland Pukalani-Maui (24797075491).jpg",
+  "autor": "Forest and Kim Starr",
+  "licencia": "CC BY 3.0 us",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Starr-070730-7847-Capsicum_annuum-Habanero_variety-Foodland_Pukalani-Maui_(24797075491).jpg",
+  "ancho": 720,
+  "alto": 540
+ },
+ {
+  "archivo": "assets/img/productos/jitomate.webp",
+  "titulo": "Roma or Bangalore Tomatoes (Indian hybrid).jpg",
+  "autor": "Aravind Sivaraj",
+  "licencia": "CC BY-SA 3.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Roma_or_Bangalore_Tomatoes_(Indian_hybrid).jpg",
+  "ancho": 720,
+  "alto": 540
+ },
+ {
+  "archivo": "assets/img/productos/lechuga.webp",
+  "titulo": "Romaine lettuce.jpg",
+  "autor": "Rainer Zenz",
+  "licencia": "CC BY-SA 3.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Romaine_lettuce.jpg",
+  "ancho": 720,
+  "alto": 540
+ },
+ {
+  "archivo": "assets/img/productos/limon.webp",
+  "titulo": "Lime Drops (4269384402).jpg",
+  "autor": "THOR",
+  "licencia": "CC BY 2.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Lime_Drops_(4269384402).jpg",
+  "ancho": 720,
+  "alto": 540
+ },
+ {
+  "archivo": "assets/img/productos/mandarina.webp",
+  "titulo": "2023 Mandarynki.jpg",
+  "autor": "Jacek Halicki",
+  "licencia": "CC BY-SA 4.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:2023_Mandarynki.jpg",
+  "ancho": 720,
+  "alto": 540
+ },
+ {
+  "archivo": "assets/img/productos/mango.webp",
+  "titulo": "Mango Alphonso Ataulfo Asit.JPG",
+  "autor": "Thaumaturgist",
+  "licencia": "CC BY-SA 3.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Mango_Alphonso_Ataulfo_Asit.JPG",
+  "ancho": 720,
+  "alto": 540
+ },
+ {
+  "archivo": "assets/img/productos/manzana.webp",
+  "titulo": "Red Apple.jpg",
+  "autor": "Abhijit Tembhekar from Mumbai, India",
+  "licencia": "CC BY 2.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Red_Apple.jpg",
+  "ancho": 720,
+  "alto": 540
+ },
+ {
+  "archivo": "assets/img/productos/melon.webp",
+  "titulo": "Cucumis melo var. reticulatus (photo by Scott Bauer).jpg",
+  "autor": "USDA photo by Scott Bauer. Image Number K7355-11.",
+  "licencia": "Public domain",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Cucumis_melo_var._reticulatus_(photo_by_Scott_Bauer).jpg",
+  "ancho": 643,
+  "alto": 482
+ },
+ {
+  "archivo": "assets/img/productos/naranja-agria.webp",
+  "titulo": "Turunç - Citrus aurantium 02.JPG",
+  "autor": "Zeynel Cebeci",
+  "licencia": "CC BY-SA 4.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Turun%C3%A7_-_Citrus_aurantium_02.JPG",
+  "ancho": 720,
+  "alto": 540
+ },
+ {
+  "archivo": "assets/img/productos/naranja.webp",
+  "titulo": "Orange-Fruit-Pieces.jpg",
+  "autor": "Evan-Amos",
+  "licencia": "CC BY-SA 3.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Orange-Fruit-Pieces.jpg",
+  "ancho": 616,
+  "alto": 462
+ },
+ {
+  "archivo": "assets/img/productos/papaya.webp",
+  "titulo": "Papaya cut half.jpg",
+  "autor": "Maksym Kozlenko",
+  "licencia": "CC BY-SA 4.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Papaya_cut_half.jpg",
+  "ancho": 720,
+  "alto": 540
+ },
+ {
+  "archivo": "assets/img/productos/pepino.webp",
+  "titulo": "Greek yoghurt cucumbers garlic.jpg",
+  "autor": "Nikodem Nijaki",
+  "licencia": "CC BY-SA 3.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Greek_yoghurt_cucumbers_garlic.jpg",
+  "ancho": 637,
+  "alto": 478
+ },
+ {
+  "archivo": "assets/img/productos/pina.webp",
+  "titulo": "Pineapple fruit 2.jpg",
+  "autor": "Wilfredor",
+  "licencia": "CC0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Pineapple_fruit_2.jpg",
+  "ancho": 720,
+  "alto": 540
+ },
+ {
+  "archivo": "assets/img/productos/pitahaya.webp",
+  "titulo": "Webysther 20150409032418 - Pitaya.jpg",
+  "autor": "Webysther Nunes",
+  "licencia": "CC BY-SA 4.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Webysther_20150409032418_-_Pitaya.jpg",
+  "ancho": 720,
+  "alto": 540
+ },
+ {
+  "archivo": "assets/img/productos/platano.webp",
+  "titulo": "Banana bunch.jpeg",
+  "autor": "NW Indian Language Institute (NW Indian Language Institute (talk))",
+  "licencia": "CC BY 3.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Banana_bunch.jpeg",
+  "ancho": 720,
+  "alto": 540
+ },
+ {
+  "archivo": "assets/img/productos/sandia.webp",
+  "titulo": "Sliced Watermelon.jpg",
+  "autor": "Harsha K R",
+  "licencia": "CC BY-SA 2.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Sliced_Watermelon.jpg",
+  "ancho": 643,
+  "alto": 482
+ },
+ {
+  "archivo": "assets/img/productos/toronja.webp",
+  "titulo": "Citrus paradisi (Grapefruit, pink) white bg.jpg",
+  "autor": "Citrus_paradisi_(Grapefruit,_pink).jpg: א (Aleph)\nderivative work: — raeky",
+  "licencia": "CC BY-SA 2.5",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Citrus_paradisi_(Grapefruit,_pink)_white_bg.jpg",
+  "ancho": 640,
+  "alto": 480
+ },
+ {
+  "archivo": "assets/img/productos/uva.webp",
+  "titulo": "Green Grapes October 5th.jpg",
+  "autor": "tribp",
+  "licencia": "CC BY 2.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Green_Grapes_October_5th.jpg",
+  "ancho": 640,
+  "alto": 480
+ },
+ {
+  "archivo": "assets/img/productos/zanahoria.webp",
+  "titulo": "Carrot vegetables, April 2023.jpg",
+  "autor": "Grace789",
+  "licencia": "CC BY-SA 4.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Carrot_vegetables,_April_2023.jpg",
+  "ancho": 720,
+  "alto": 540
+ }
+]

@@ -1,0 +1,4 @@
+# Si se publica en Apache: nunca servir archivos ocultos (.env, .gitignore, ...)
+<FilesMatch "^\.">
+  Require all denied
+</FilesMatch>

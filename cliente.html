@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Mi cuenta | ReyesFruitHub</title>
+  <meta name="description" content="Catálogo, carrito y pedidos del cliente de la Frutería Reyes.">
+  <meta name="theme-color" content="#047857">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="has-bottom-nav">
+  <a class="skip-link" href="#vista">Saltar al contenido</a>
+  <div class="demo-banner"><strong>Versión de desarrollo</strong> · precios y existencias de ejemplo</div>
+
+  <div class="app">
+    <aside class="sidebar" id="sidebar" aria-label="Menú del cliente">
+      <a class="brand" href="index.html"><span class="brand-mark" data-icon="leaf"></span><span>ReyesFruitHub<small>Frutería Reyes</small></span></a>
+      <nav id="side-nav"></nav>
+      <div class="sidebar-foot">
+        <div class="user-chip"><span class="avatar" id="u-avatar"></span><div><strong id="u-name"></strong><span id="u-mail"></span></div></div>
+        <button class="btn btn-ghost btn-block" type="button" id="btn-salir" data-icon-before="logout">Cerrar sesión</button>
+      </div>
+    </aside>
+    <div class="scrim" id="scrim"></div>
+
+    <div class="main">
+      <header class="topbar">
+        <button class="btn btn-ghost btn-icon menu-btn" type="button" id="btn-menu" aria-label="Abrir menú" aria-controls="sidebar" aria-expanded="false" data-icon="menu"></button>
+        <h1 id="view-title">Catálogo</h1>
+        <span class="spacer"></span>
+        <a class="btn btn-soft" href="#carrito" id="top-cart" aria-label="Ver carrito"><span data-icon="cart"></span><span class="num" id="top-cart-n">0</span></a>
+      </header>
+      <main class="content" id="vista" tabindex="-1"></main>
+    </div>
+  </div>
+
+  <nav class="bottom-nav" aria-label="Navegación inferior" id="bottom-nav"></nav>
+
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/cliente.js"></script>
+</body>
+</html>

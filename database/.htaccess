@@ -1,0 +1,2 @@
+# Si se publica en Apache: esta carpeta nunca debe ser accesible desde la web
+Require all denied

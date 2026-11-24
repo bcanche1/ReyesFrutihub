@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Créditos de fotos | ReyesFruitHub</title>
+  <meta name="description" content="Autores y licencias de las fotos ilustrativas usadas en ReyesFruitHub.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header"><div class="container"><a class="brand" href="index.html"><span class="brand-mark" data-icon="leaf"></span><span>ReyesFruitHub<small>Frutería Reyes</small></span></a></div></header>
+  <main class="container section" id="contenido">
+    <div class="section-head"><div><h1 style="font-size:var(--fs-2xl)">Créditos de fotos</h1>
+      <p>Fotos ilustrativas obtenidas de Wikimedia Commons, usadas según su licencia. No son fotos de los productos de la Frutería Reyes; se reemplazarán por fotos propias.</p></div></div>
+    <div class="card"><div class="table-wrap"><table class="table">
+      <thead><tr><th>Foto</th><th>Archivo original</th><th>Autor</th><th>Licencia</th></tr></thead>
+      <tbody id="lista"></tbody>
+    </table></div></div>
+  </main>
+  <script src="assets/js/ui.js"></script>
+  <script>
+    (async function () {
+      document.querySelectorAll("[data-icon]").forEach((el) => { el.innerHTML = RFH.icon(el.dataset.icon); });
+      const tb = document.getElementById("lista");
+      try {
+        const c = await (await fetch("assets/img/creditos.json")).json();
+        tb.innerHTML = c.map((x) => '<tr><td><img src="' + RFH.esc(x.archivo) + '" alt="" width="72" height="54" loading="lazy" style="border-radius:8px;object-fit:cover;width:72px;height:54px"></td>' +
+          '<td><a href="' + RFH.esc(x.fuente) + '" rel="noopener" target="_blank">' + RFH.esc(x.titulo) + "</a></td><td>" + RFH.esc(x.autor) + "</td><td>" + RFH.esc(x.licencia) + "</td></tr>").join("");
+      } catch (e) { tb.innerHTML = '<tr><td colspan="4">No se pudo cargar la lista. Abre la aplicación con iniciar.bat.</td></tr>'; }
+    })();
+  </script>
+</body>
+</html>

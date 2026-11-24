@@ -1,0 +1,13 @@
+{
+  "name": "reyesfruithub-tests",
+  "private": true,
+  "type": "module",
+  "description": "Pruebas de API e interfaz de ReyesFruitHub",
+  "scripts": {
+    "api": "node api.test.mjs http://localhost:8091",
+    "e2e": "node e2e.test.mjs http://localhost:8091"
+  },
+  "devDependencies": {
+    "playwright-core": "1.65.1"
+  }
+}

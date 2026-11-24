@@ -1,0 +1,4 @@
+# Si se publica en Apache: solo index.php es accesible desde la web
+<FilesMatch "^(config|lib)\.php$">
+  Require all denied
+</FilesMatch>

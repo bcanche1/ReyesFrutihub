@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Frutería Reyes · Fruta y verdura fresca en línea | ReyesFruitHub</title>
+  <meta name="description" content="Consulta qué fruta y verdura hay hoy en la Frutería Reyes, arma tu pedido en línea y recógelo en tienda o recíbelo en casa.">
+  <meta name="theme-color" content="#047857">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="assets/img/portada.webp" fetchpriority="high">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="demo-banner"><strong>Versión de desarrollo</strong> · precios y existencias de ejemplo</div>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html" aria-label="ReyesFruitHub, inicio">
+        <span class="brand-mark" data-icon="leaf"></span>
+        <span>ReyesFruitHub<small>Frutería Reyes</small></span>
+      </a>
+      <nav class="site-nav" aria-label="Principal">
+        <a href="#catalogo">Lo que hay hoy</a>
+        <a href="#como-funciona">Cómo pedir</a>
+        <a href="#visitanos">Visítanos</a>
+      </nav>
+      <span class="spacer"></span>
+      <a class="btn btn-ghost" href="login.html" id="btn-sesion">Iniciar sesión</a>
+      <a class="btn btn-primary" href="login.html?modo=registro" id="btn-cta-top">Hacer pedido</a>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero-photo" aria-labelledby="hero-title">
+      <img class="hero-bg" src="assets/img/portada.webp" alt="" width="1600" height="1067" fetchpriority="high" decoding="async">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <span class="eyebrow eyebrow-light" data-icon-before="leaf">Fresco de hoy en [Valladolid, Yucatán]</span>
+          <h1 id="hero-title">Fruta y verdura fresca, <em>apartada antes de que llegues</em></h1>
+          <p class="lead">Mira qué hay en la frutería, arma tu pedido desde el celular y pásalo a recoger o recíbelo en casa. Sin filas y sin quedarte sin lo que buscabas.</p>
+          <div class="cta">
+            <a class="btn btn-accent btn-lg" href="login.html?modo=registro" data-icon-after="arrowRight">Hacer mi pedido</a>
+            <a class="btn btn-glass btn-lg" href="#catalogo">Ver lo que hay hoy</a>
+          </div>
+          <div class="hero-points">
+            <span data-icon-before="checkCircle">Existencias al día</span>
+            <span data-icon-before="store">Recoge en tienda</span>
+            <span data-icon-before="truck">Entrega a domicilio [ZONA]</span>
+          </div>
+        </div>
+        <aside class="hero-card" aria-labelledby="hc-title">
+          <div class="hero-card-top">
+            <strong id="hero-count">—</strong>
+            <span id="hc-title" class="small"><b>productos frescos</b><br><span class="muted">disponibles hoy</span></span>
+            <span class="spacer"></span>
+            <span class="badge badge-ok" data-icon-before="checkCircle">En tienda</span>
+          </div>
+          <ul class="hero-mini" id="hero-mini"></ul>
+          <a class="btn btn-primary btn-block" href="#catalogo">Ver catálogo completo</a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section-sm" aria-label="Categorías">
+      <div class="container">
+        <div class="cat-tiles" id="cat-tiles" role="group" aria-label="Filtrar por categoría"></div>
+      </div>
+    </section>
+
+    <section class="section" id="catalogo" aria-labelledby="cat-title" style="padding-top:var(--s-10)">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2 id="cat-title">Lo que hay hoy en la frutería</h2>
+            <p id="cat-sub">Existencias tomadas del inventario de la tienda. Toca <strong>+</strong> para empezar tu pedido.</p>
+          </div>
+        </div>
+        <div class="products" id="product-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section" id="como-funciona" aria-labelledby="how-title" style="padding-top:0">
+      <div class="container">
+        <div class="section-head"><div><h2 id="how-title">Pedir es así de fácil</h2><p>Tres pasos y tu fruta queda apartada.</p></div></div>
+        <ol class="steps" style="list-style:none;padding:0;margin:0">
+          <li class="card step"><div class="step-n" data-icon="search"></div><h3>1. Revisa lo disponible</h3><p>Ves en tiempo real qué hay, a qué precio y cuánto queda de cada producto.</p></li>
+          <li class="card step"><div class="step-n" data-icon="cart"></div><h3>2. Arma tu pedido</h3><p>Elige por kilo, pieza o manojo. Agrega notas como «madura para hoy».</p></li>
+          <li class="card step"><div class="step-n" data-icon="bag"></div><h3>3. Recoge o recibe</h3><p>Te avisamos cuando esté listo. Pagas al recoger o al recibir.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="visitanos" aria-labelledby="visit-title" style="padding-top:0">
+      <div class="container">
+        <div class="info-band">
+          <div class="info-photo"><img src="assets/img/mercado.webp" alt="Cajas de pitahaya, mango y papaya en un puesto de mercado" loading="lazy" width="1600" height="1067"></div>
+          <div>
+            <h2 id="visit-title">Visítanos en la frutería</h2>
+            <p>La plataforma no sustituye la atención de siempre: es otra forma de comprarnos. Si prefieres, pasa a escoger tu fruta en persona.</p>
+            <div class="row" style="margin-top:var(--s-6)">
+              <a class="btn btn-accent" href="login.html?modo=registro">Crear mi cuenta</a>
+            </div>
+          </div>
+          <div class="info-list">
+            <div><span data-icon="pin"></span><span><strong>Dirección</strong><span class="placeholder">[DIRECCIÓN DE LA FRUTERÍA]</span></span></div>
+            <div><span data-icon="clock"></span><span><strong>Horario</strong><span class="placeholder">[HORARIO]</span></span></div>
+            <div><span data-icon="phone"></span><span><strong>Teléfono / WhatsApp</strong><span class="placeholder">[TELÉFONO]</span></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>© <span id="year"></span> Frutería Reyes · ReyesFruitHub</span>
+      <span class="photo-credit">Fotos ilustrativas de Wikimedia Commons · <a href="creditos.html">créditos y licencias</a></span>
+      <span>Proyecto académico · ISC 7° «A» · ITS Valladolid</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/tienda.js"></script>
+</body>
+</html>
